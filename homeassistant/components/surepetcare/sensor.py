@@ -123,7 +123,7 @@ class Flap(SurePetcareSensor):
 
     @property
     def state(self) -> int | None:
-        """Return battery level in percent."""
+        """Return the lock state."""
         return SureLockStateID(self._state["locking"]["mode"]).name.capitalize()
 
     @property
